@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anny Caroliny | Desenvolvedora</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="dist/output.css">
+
+</head>
+
+<body class="w-full h-full overflow-x-hidden">
+
+    <canvas id="star-canvas" class="fixed top-0 left-0 w-full h-full z-[-1]"></canvas>
+
+    <!-- Header -->
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 glass-card !rounded-none !border-x-0 !border-t-0">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">AC</a>
+
+            <!-- MENU -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link text-lg font-medium">Sobre</a>
+                <a href="#projects" class="nav-link text-lg font-medium">Projetos</a>
+                <a href="#contact" class="nav-link text-lg font-medium">Contato</a>
+            </div>
+
+            <a href="#contact" class="hidden md:block glow-button text-white font-bold py-2 px-4 rounded-full">
+                Vamos Conversar!
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block text-center py-2 px-4 text-sm hover:bg-var(--deep-purple)">Sobre</a>
+            <a href="#projects" class="block text-center py-2 px-4 text-sm hover:bg-var(--deep-purple)">Projetos</a>
+            <a href="#contact" class="block text-center py-2 px-4 text-sm hover:bg-var(--deep-purple)">Contato</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center pt-20">
+            <div class="absolute inset-0 z-[-1] opacity-30">
+                <!-- Particle/Star animation could go here -->
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 scroll-reveal">
+                <span class="gradient-text">Anny Caroliny</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 scroll-reveal" style="transition-delay: 200ms;">
+                Desenvolvedora <span class="text-var(--royal-blue-glow)">Front-end</span>
+            </p>
+            <p class="max-w-2xl mx-auto mb-8 scroll-reveal" style="transition-delay: 400ms;">
+                Transformando ideias complexas em soluções elegantes e funcionais.
+            </p>
+            <div class="flex space-x-6 text-3xl scroll-reveal" style="transition-delay: 600ms;">
+                <a href="https://github.com/dev-anny" target="_blank"
+                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anny-caroliny-b07557371/" target="_blank"
+                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:dev.annyops@gmail.com"
+                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 scroll-reveal">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Sobre Mim</h2>
+            <div class="w-full md:w-2/3 mx-auto text-center">
+                <p class="mb-4">
+                    Olá! Sou Anny Caroliny. Assim como os astrônomos exploram galáxias distantes, eu mergulho no
+                    cosmos do código para criar aplicações robustas e escaláveis. Minha jornada no desenvolvimento
+                    de software é movida pela curiosidade e pelo desejo de construir constelações digitais que
+                    impactam positivamente a vida das pessoas.
+                </p>
+                <p class="mb-6">
+                    Com experiência em tecnologias de ponta, busco sempre aprimorar minhas habilidades e encontrar
+                    as melhores ferramentas para cada desafio, transformando linhas de código em experiências
+                    incríveis.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text scroll-reveal">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1 -->
+                <div class="glass-card p-4 scroll-reveal cursor-pointer group hover:border-var(--royal-blue-glow) transition-all duration-300"
+                    onclick="openModal(0)">
+                    <div class="overflow-hidden rounded-lg mb-4 h-48 w-full">
+                        <img src="./src/img/atlas-cosmico.png" alt="Atlas Cósmico"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3
+                        class="text-xl font-bold text-center text-var(--royal-blue-glow) group-hover:text-white transition-colors">
+                        Atlas Cósmico</h3>
+                    <p
+                        class="text-center text-xs text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Clique para ver detalhes</p>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-card p-4 scroll-reveal cursor-pointer group hover:border-var(--royal-blue-glow) transition-all duration-300"
+                    onclick="openModal(1)" style="transition-delay: 200ms;">
+                    <div class="overflow-hidden rounded-lg mb-4 h-48 w-full">
+                        <img src="./src/img/acerto-facil.png" alt="Acerto Fácil"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3
+                        class="text-xl font-bold text-center text-var(--royal-blue-glow) group-hover:text-white transition-colors">
+                        Acerto Fácil</h3>
+                    <p
+                        class="text-center text-xs text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Clique para ver detalhes</p>
+                </div>
+
+                <!-- Project Card 3 — Toon Snacks -->
+                <div class="glass-card p-4 scroll-reveal cursor-pointer group hover:border-var(--royal-blue-glow) transition-all duration-300"
+                    onclick="openModal(2)" style="transition-delay: 400ms;">
+                    <div class="overflow-hidden rounded-lg mb-4 h-48 w-full">
+                        <img src="./src/img/toon-snacks-cardapio.png" alt="Toon Snacks"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <h3
+                        class="text-xl font-bold text-center text-var(--royal-blue-glow) group-hover:text-white transition-colors">
+                        Toon Snacks</h3>
+                    <p
+                        class="text-center text-xs text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Clique para ver detalhes</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center scroll-reveal">
+            <h2 class="text-4xl font-bold mb-4 gradient-text">Entre em Contato</h2>
+            <p class="max-w-xl mx-auto mb-8">
+                Pronto para lançar seu próximo projeto? Vamos criar algo incrível. Envie uma mensagem!
+            </p>
+
+            <!-- FORMULÁRIO COM ID E AJAX -->
+            <form id="contactForm" action="https://formcarry.com/s/m5jEDF9sYIW" method="POST"
+                class="max-w-xl mx-auto mb-8">
+                <div class="mb-4">
+                    <input type="text" name="nome" placeholder="Seu Nome" required
+                        class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-var(--royal-blue-glow) text-gray-200">
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Seu E-mail" required
+                        class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-var(--royal-blue-glow) text-gray-200">
+                </div>
+                <div class="mb-4">
+                    <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required
+                        class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-var(--royal-blue-glow) text-gray-200"></textarea>
+                </div>
+
+                <!-- Botão Submit -->
+                <button type="submit" id="submitBtn"
+                    class="glow-button w-full text-white font-bold py-3 px-6 rounded-full transition-all">
+                    <span>Enviar Mensagem <i class="fas fa-rocket ml-2"></i></span>
+                </button>
+            </form>
+
+            <!-- MENSAGEM DE SUCESSO/ERRO (INICIALMENTE OCULTA) -->
+            <div id="formStatus" class="max-w-xl mx-auto hidden transition-all duration-300">
+                <div class="glass-card p-6 border-green-500/50 flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-4 text-green-400 text-3xl">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Mensagem Enviada!</h3>
+                    <p class="text-gray-300">Obrigada pelo contato. Responderei o mais breve possível.</p>
+                    <button onclick="resetForm()"
+                        class="mt-4 text-sm text-var(--royal-blue-glow) hover:text-white underline">
+                        Enviar outra mensagem
+                    </button>
+                </div>
+            </div>
+
+            <!-- Botão Adicional do WhatsApp -->
+            <div class="max-w-xl mx-auto">
+                <div class="relative flex py-5 items-center mb-4">
+                    <div class="flex-grow border-t border-gray-700"></div>
+                    <span class="flex-shrink-0 mx-4 text-gray-500 text-sm">ou se preferir</span>
+                    <div class="flex-grow border-t border-gray-700"></div>
+                </div>
+
+                <a href="https://wa.me/5582999537765?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                    target="_blank"
+                    class="w-full flex items-center justify-center bg-transparent border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] group">
+                    <i class="fab fa-whatsapp text-xl mr-2 group-hover:scale-110 transition-transform"></i>
+                    Iniciar Conversa no WhatsApp
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer Profissional -->
+    <footer id="main-footer" class="relative mt-16 border-t border-var(--glass-border) bg-black/20 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Seção da Marca -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold gradient-text">Anny Caroliny</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                        Desenvolvedora Front-end apaixonada por criar experiências digitais imersivas e funcionais.
+                    </p>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <!-- Social Icons -->
+                        <a href="https://github.com/dev-anny" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anny-caroliny-b07557371/" target="_blank"
+                            class="text-gray-400 hover:text-[#0077b5] transition-colors hover:scale-110 transform duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:dev.annyops@gmail.com"
+                            class="text-gray-400 hover:text-red-400 transition-colors hover:scale-110 transform duration-200">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div>
+                    <h4
+                        class="text-md font-semibold text-white mb-4 border-b border-var(--royal-blue-glow) pb-1 inline-block">
+                        Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="footer-link text-xs"><i
+                                    class="fas fa-chevron-right text-[10px] mr-2"></i>Início</a></li>
+                        <li><a href="#about" class="footer-link text-xs"><i
+                                    class="fas fa-chevron-right text-[10px] mr-2"></i>Sobre Mim</a></li>
+                        <li><a href="#projects" class="footer-link text-xs"><i
+                                    class="fas fa-chevron-right text-[10px] mr-2"></i>Projetos</a></li>
+                        <li><a href="#contact" class="footer-link text-xs"><i
+                                    class="fas fa-chevron-right text-[10px] mr-2"></i>Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div>
+                    <h4
+                        class="text-md font-semibold text-white mb-4 border-b border-var(--royal-blue-glow) pb-1 inline-block">
+                        Contato</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-center md:justify-start space-x-3 text-gray-400 text-xs">
+                            <div
+                                class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-var(--royal-blue-glow)">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Brasil (Remoto)</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-3 text-gray-400 text-xs">
+                            <div
+                                class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-var(--royal-blue-glow)">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>dev.annyops@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra Inferior -->
+        <div class="border-t border-gray-800 bg-black/30">
+            <div
+                class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Anny Caroliny. Todos os direitos reservados.</p>
+                <div class="mt-2 md:mt-0 flex items-center space-x-2">
+                    <span>Desenvolvido com</span>
+                    <i class="fas fa-heart text-red-500 animate-pulse text-[10px]"></i>
+                    <span>e muito código.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5582999537765?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+        class="whatsapp-float" target="_blank" aria-label="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL PADRÃO (Atlas Cósmico e Acerto Fácil) -->
+    <div id="project-modal" class="fixed inset-0 z-[60] hidden items-center justify-center modal-overlay p-4"
+        onclick="closeModal()">
+        <div class="glass-card max-w-4xl w-full max-h-[90vh] overflow-y-auto p-0 relative modal-content flex flex-col md:flex-row"
+            onclick="event.stopPropagation()">
+
+            <!-- Botão Fechar -->
+            <button onclick="closeModal()"
+                class="absolute top-3 right-3 z-10 text-white bg-black/50 hover:bg-red-500 rounded-full w-8 h-8 flex items-center justify-center transition-colors cursor-pointer">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Seção da Imagem -->
+            <div class="w-full md:w-3/5 p-6 flex items-center justify-center">
+                <img id="modal-img" src="" alt="Detalhe do projeto" style="aspect-ratio: 16 / 9;"
+                    class="w-full object-cover rounded-xl border-2 border-[var(--royal-blue-glow)] shadow-[0_0_15px_rgba(74,125,255,0.3)]">
+            </div>
+
+            <!-- Conteúdo do Modal -->
+            <div class="w-full md:w-2/5 p-8 md:pl-2 flex flex-col justify-center">
+                <h3 id="modal-title" class="text-3xl font-bold mb-4 gradient-text"></h3>
+
+                <p class="text-xs text-gray-400 uppercase tracking-widest mb-2 font-semibold">Especificações</p>
+                <p id="modal-desc" class="text-gray-200 text-base mb-8 leading-relaxed"></p>
+
+                <p class="text-xs text-gray-400 uppercase tracking-widest mb-2 font-semibold">Linguagens Usadas</p>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-8"></div>
+
+                <div class="flex space-x-4 mt-auto">
+                    <a id="modal-repo" href="#" target="_blank"
+                        class="modal-btn modal-btn-repo flex-1 text-center border border-var(--royal-blue-glow) text-var(--royal-blue-glow) font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-github text-lg"></i> Ver Código
+                    </a>
+                    <a id="modal-demo" href="#" target="_blank"
+                        class="modal-btn modal-btn-demo flex-1 text-center bg-[var(--royal-blue-glow)] text-white font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+                        <i class="fas fa-external-link-alt text-lg"></i> Ver Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TOON SNACKS (layout especial: 2 imagens + botões Demo) -->
+    <div id="modal-toon" class="fixed inset-0 z-[60] modal-overlay p-4"
+        style="display:none; align-items:center; justify-content:center;" onclick="closeModal()">
+        <div class="glass-card modal-content relative"
+            style="display:flex; flex-direction:column; gap:1.25rem; width:100%; max-width:780px; max-height:92vh; overflow-y:auto; padding:2rem;"
+            onclick="event.stopPropagation()">
+
+            <!-- Título + Botão Fechar na mesma linha -->
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+                <h3 class="text-3xl font-bold gradient-text">Toon Snacks</h3>
+                <button onclick="closeModal()"
+                    class="text-white bg-black/50 hover:bg-red-500 rounded-full w-8 h-8 flex items-center justify-center transition-colors cursor-pointer"
+                    style="flex-shrink:0; margin-left:1rem;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Especificações -->
+            <div>
+                <p class="text-xs text-gray-400 uppercase tracking-widest mb-2 font-semibold">Especificações</p>
+                <p class="text-gray-200 text-base leading-relaxed">Menu digital interativo com dashboard Kanban em tempo
+                    real. O cliente faz pedidos pelo cardápio e o admin acompanha e atualiza os status instantaneamente
+                    via Firebase Firestore.</p>
+            </div>
+
+            <!-- Tags -->
+            <div>
+                <p class="text-xs text-gray-400 uppercase tracking-widest mb-3 font-semibold">Linguagens Usadas</p>
+                <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                    <span
+                        class="bg-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-700 text-gray-300">Vanilla
+                        JS</span>
+                    <span
+                        class="bg-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-700 text-gray-300">Tailwind
+                        CSS</span>
+                    <span
+                        class="bg-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-700 text-gray-300">Firebase</span>
+                </div>
+            </div>
+
+            <!-- Duas imagens lado a lado — layout 100% inline para garantir grid -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+
+                <!-- Cardápio -->
+                <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <div class="rounded-xl overflow-hidden"
+                        style="border:2px solid var(--royal-blue-glow); box-shadow:0 0 15px rgba(74,125,255,0.3);">
+                        <img src="./src/img/toon-snacks-cardapio.png" alt="Cardápio"
+                            style="aspect-ratio:16/9; display:block; width:100%; object-fit:cover;">
+                    </div>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest text-center font-semibold">Cardápio</p>
+                    <div style="display:flex; justify-content:center;">
+                        <a href="https://toon-snacks.vercel.app" target="_blank"
+                            class="modal-btn modal-btn-demo text-white font-bold text-sm"
+                            style="border:1px solid var(--royal-blue-glow); padding:0.5rem 2rem; border-radius:0.75rem; display:flex; align-items:center; gap:0.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Painel Admin -->
+                <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <div class="rounded-xl overflow-hidden"
+                        style="border:2px solid var(--royal-blue-glow); box-shadow:0 0 15px rgba(74,125,255,0.3);">
+                        <img src="./src/img/toon-snacks-admin.png" alt="Painel Admin"
+                            style="aspect-ratio:16/9; display:block; width:100%; object-fit:cover;">
+                    </div>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest text-center font-semibold">Painel Admin
+                    </p>
+                    <div style="display:flex; justify-content:center;">
+                        <a href="https://toon-snacks.vercel.app/admin.html" target="_blank"
+                            class="modal-btn modal-btn-demo text-white font-bold text-sm"
+                            style="border:1px solid var(--royal-blue-glow); padding:0.5rem 2rem; border-radius:0.75rem; display:flex; align-items:center; gap:0.5rem;">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Ver Código -->
+            <div style="display:flex; justify-content:center;">
+                <a href="https://github.com/dev-anny/Toon-Snacks" target="_blank"
+                    class="modal-btn modal-btn-repo text-white font-bold text-sm"
+                    style="border:2px solid var(--royal-blue-glow); padding:0.75rem 3rem; border-radius:0.75rem; display:flex; align-items:center; gap:0.5rem;">
+                    <i class="fab fa-github"></i> Ver Código
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+
+</body>
+
+</html>
