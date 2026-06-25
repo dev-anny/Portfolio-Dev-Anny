@@ -1,7 +1,7 @@
 const projectsData = [
     {
         title: "Atlas Cósmico",
-        img: "./src/img/Atlas-Cosmico.png",
+        img: "./src/img/atlas-Cosmico.png",
         desc: "Uma enciclopédia interativa desenvolvida para aproximar o público das maravilhas do espaço, utilizando dados oficiais em tempo real.",
         tags: ["Tailwind CSS", "Vanilla JS", "APIs REST"],
         repoLink: "https://github.com/dev-anny/Atlas-Cosmico",
