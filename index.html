@@ -18,6 +18,21 @@
 
     <link rel="stylesheet" href="dist/output.css">
 
+    <style>
+        /* Hover cores por plataforma — independente do Tailwind JIT */
+        .icon-github:hover {
+            color: #ffffff;
+        }
+
+        .icon-linkedin:hover {
+            color: #0A66C2;
+        }
+
+        .icon-instagram:hover {
+            color: #E1306C;
+        }
+    </style>
+
 </head>
 
 <body class="w-full h-full overflow-x-hidden">
@@ -69,14 +84,14 @@
             </p>
             <div class="flex space-x-6 text-3xl scroll-reveal" style="transition-delay: 600ms;">
                 <a href="https://github.com/dev-anny" target="_blank"
-                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
+                    class="icon-github transition-colors hover:scale-110 transform duration-200"><i
                         class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/anny-caroliny-b07557371/" target="_blank"
-                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
+                    class="icon-linkedin transition-colors hover:scale-110 transform duration-200"><i
                         class="fab fa-linkedin"></i></a>
-                <a href="mailto:dev.annyops@gmail.com"
-                    class="hover:text-var(--royal-blue-glow) transition-transform hover:scale-110"><i
-                        class="fas fa-envelope"></i></a>
+                <a href="https://www.instagram.com/anny.v7/" target="_blank"
+                    class="icon-instagram transition-colors hover:scale-110 transform duration-200"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </section>
 
@@ -229,16 +244,16 @@
                     <div class="flex space-x-4 justify-center md:justify-start">
                         <!-- Social Icons -->
                         <a href="https://github.com/dev-anny" target="_blank"
-                            class="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+                            class="icon-github text-gray-400 transition-colors hover:scale-110 transform duration-200">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/anny-caroliny-b07557371/" target="_blank"
-                            class="text-gray-400 hover:text-[#0077b5] transition-colors hover:scale-110 transform duration-200">
+                            class="icon-linkedin text-gray-400 transition-colors hover:scale-110 transform duration-200">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
-                        <a href="mailto:dev.annyops@gmail.com"
-                            class="text-gray-400 hover:text-red-400 transition-colors hover:scale-110 transform duration-200">
-                            <i class="fas fa-envelope text-xl"></i>
+                        <a href="https://www.instagram.com/anny.v7/" target="_blank"
+                            class="icon-instagram text-gray-400 transition-colors hover:scale-110 transform duration-200">
+                            <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -276,9 +291,10 @@
                         <li class="flex items-center justify-center md:justify-start space-x-3 text-gray-400 text-xs">
                             <div
                                 class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-var(--royal-blue-glow)">
-                                <i class="fas fa-envelope"></i>
+                                <i class="fab fa-instagram"></i>
                             </div>
-                            <span>dev.annyops@gmail.com</span>
+                            <a href="https://www.instagram.com/anny.v7/" target="_blank"
+                                class="hover:text-white transition-colors">@anny.v7</a>
                         </li>
                     </ul>
                 </div>
